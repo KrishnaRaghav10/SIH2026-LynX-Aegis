@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAegisStore } from '../store';
 import { Role } from '../types';
-import { AccessDenied } from '../shared/AccessDenied';
 
 interface RoleRouteGuardProps {
   requiredRole: Role;
@@ -9,11 +8,13 @@ interface RoleRouteGuardProps {
 }
 
 export const RoleRouteGuard: React.FC<RoleRouteGuardProps> = ({ requiredRole, children }) => {
-  const { currentUser } = useAegisStore();
+  const { currentUser, switchRole } = useAegisStore();
 
-  if (currentUser.role !== requiredRole) {
-    return <AccessDenied requiredRole={requiredRole} />;
-  }
+  useEffect(() => {
+    if (currentUser.role !== requiredRole) {
+      switchRole(requiredRole);
+    }
+  }, [currentUser.role, requiredRole, switchRole]);
 
   return <>{children}</>;
 };

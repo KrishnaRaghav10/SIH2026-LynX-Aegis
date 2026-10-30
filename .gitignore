@@ -6,3 +6,6 @@ __pycache__/
 venv/
 .venv/
 frontend/node_modules/
+output_videos/
+*.mp4
+*.webm

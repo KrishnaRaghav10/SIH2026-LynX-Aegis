@@ -32,8 +32,8 @@ os.makedirs(UPLOADS_DIR, exist_ok=True)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="SmartVerifyAI API",
-    description="Role-Based Application Validation & Document Verification System for AICTE (SIH 2026)",
+    title="AEGIS API",
+    description="AICTE Approval & Compliance Management System",
     version="2.0.0"
 )
 

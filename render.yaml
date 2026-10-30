@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: smartverifyai
+    name: aegis-platform
     env: python
     buildCommand: "pip install -r backend/requirements.txt && cd backend && python generate_samples_and_seed.py"
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT --app-dir backend"

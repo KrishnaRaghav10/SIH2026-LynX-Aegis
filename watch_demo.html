@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartVerifyAI - Complete Role Walkthrough Video (1080p Full HD)</title>
+  <title>AEGIS - 10-Role Platform Walkthrough Video (1080p Full HD)</title>
+  <link rel="icon" type="image/svg+xml" href="frontend/public/shield.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Noto Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #0F172A;
       color: #F8FAFC;
       min-height: 100vh;
@@ -18,16 +19,16 @@
       flex-direction: column;
     }
     .tricolour {
-      height: 6px;
+      height: 5px;
       display: flex;
       width: 100%;
     }
-    .tricolour .saffron { width: 33.33%; background: #FF9933; }
+    .tricolour .saffron { width: 33.33%; background: #F28C28; }
     .tricolour .white { width: 33.33%; background: #FFFFFF; }
     .tricolour .green { width: 33.34%; background: #138808; }
     
     header {
-      padding: 16px 24px;
+      padding: 16px 28px;
       background: #1E293B;
       border-bottom: 1px solid #334155;
       display: flex;
@@ -42,24 +43,26 @@
     .badge-portal {
       font-size: 11px;
       font-weight: 700;
-      background: rgba(232, 137, 12, 0.2);
-      color: #E8890C;
-      border: 1px solid rgba(232, 137, 12, 0.5);
-      padding: 2px 8px;
-      border-radius: 4px;
+      background: rgba(242, 140, 40, 0.2);
+      color: #F28C28;
+      border: 1px solid rgba(242, 140, 40, 0.4);
+      padding: 2px 10px;
+      border-radius: 999px;
       text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     .container {
-      max-width: 1140px;
-      margin: 24px auto;
-      padding: 0 16px;
+      max-width: 1200px;
+      margin: 28px auto;
+      padding: 0 20px;
+      width: 100%;
       flex: 1;
     }
     .video-wrapper {
       position: relative;
       background: #020617;
       border: 1px solid #334155;
-      border-radius: 8px;
+      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     }
@@ -73,36 +76,37 @@
       margin-top: 24px;
       background: #1E293B;
       border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 24px;
     }
     .chapters-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 12px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
     .chapter-card {
       background: #0F172A;
       border: 1px solid #334155;
-      border-radius: 6px;
-      padding: 10px 14px;
+      border-radius: 12px;
+      padding: 12px 16px;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
     }
     .chapter-card:hover {
-      border-color: #E8890C;
+      border-color: #F28C28;
       background: #182234;
+      transform: translateY(-2px);
     }
     .chapter-time {
       font-size: 11px;
       font-family: monospace;
-      color: #E8890C;
+      color: #F28C28;
       font-weight: 700;
     }
     .chapter-title {
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
       color: #F1F5F9;
       margin-top: 2px;
     }
@@ -110,33 +114,35 @@
       font-size: 11px;
       color: #94A3B8;
       margin-top: 4px;
-      line-height: 1.35;
+      line-height: 1.4;
     }
     .downloads-bar {
       margin-top: 16px;
       display: flex;
       gap: 12px;
       align-items: center;
+      flex-wrap: wrap;
     }
     .btn-download {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #1B3A6B;
+      background: #1F3A8A;
       color: #FFF;
       text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 4px;
+      padding: 10px 20px;
+      border-radius: 12px;
       font-size: 12px;
-      font-weight: 600;
-      border: 1px solid #2B5797;
+      font-weight: 700;
+      border: 1px solid #3B82F6;
+      transition: all 0.15s ease;
     }
-    .btn-download:hover { background: #142C52; }
+    .btn-download:hover { background: #172554; }
     .btn-download.saffron {
-      background: #E8890C;
-      border-color: #C97207;
+      background: #F28C28;
+      border-color: #EA580C;
     }
-    .btn-download.saffron:hover { background: #C97207; }
+    .btn-download.saffron:hover { background: #D97706; }
   </style>
 </head>
 <body>
@@ -148,87 +154,139 @@
 
   <header>
     <div class="brand">
-      <img src="frontend/public/logo.svg" width="36" height="36" alt="SmartVerifyAI Logo">
-      <h1 style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Smart<span style="color: #E8890C;">Verify</span>AI</h1>
-      <span class="badge-portal">AICTE EoA Prototype</span>
+      <img src="frontend/public/shield.svg" width="38" height="38" alt="AEGIS Shield">
+      <div>
+        <h1 style="font-size: 18px; font-weight: 800; color: #FFFFFF; font-family: 'Poppins', sans-serif;">AEGIS</h1>
+        <p style="font-size: 11px; color: #94A3B8; margin-top: -2px;">AICTE Approval & Compliance Management System</p>
+      </div>
+      <span class="badge-portal">10 Specialized Roles</span>
     </div>
     <div style="font-size: 12px; color: #94A3B8;">
-      Duration: <strong style="color: #F8FAFC;">2 min 44 sec</strong> · 1080p Full HD Screen Recording
+      Duration: <strong style="color: #F8FAFC;">3 min 14 sec</strong> · 1080p Full HD
     </div>
   </header>
 
   <div class="container">
     <div class="video-wrapper">
       <video id="demoVideo" controls autoplay muted>
-        <source src="SmartVerifyAI_Demo_Walkthrough.mp4" type="video/mp4">
-        <source src="SmartVerifyAI_Demo_Walkthrough.webm" type="video/webm">
+        <source src="AEGIS_Demo_Walkthrough.mp4" type="video/mp4">
+        <source src="AEGIS_Demo_Walkthrough.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="downloads-bar">
       <span style="font-size: 12px; color: #94A3B8;">Direct Video Files:</span>
-      <a href="SmartVerifyAI_Demo_Walkthrough.mp4" download class="btn-download saffron">
-        ⬇ Download MP4 Video (1080p Full HD)
+      <a href="AEGIS_Demo_Walkthrough.mp4" download class="btn-download saffron">
+        ⬇ Download MP4 Video (1080p Full HD · 79 MB)
       </a>
-      <a href="SmartVerifyAI_Demo_Walkthrough.webm" download class="btn-download">
+      <a href="AEGIS_Demo_Walkthrough.webm" download class="btn-download">
         ⬇ Download WebM Video (Master)
       </a>
     </div>
 
     <div class="chapters-panel">
-      <h3 style="font-size: 14px; font-weight: 700; color: #F8FAFC; text-transform: uppercase; letter-spacing: 0.05em;">
-        Step-by-Step Video Chapters & Timestamps
+      <h3 style="font-size: 13px; font-weight: 800; color: #F8FAFC; text-transform: uppercase; letter-spacing: 0.05em;">
+        Demonstration Chapters (2m 53s · Equal Time per Feature)
       </h3>
       <p style="font-size: 12px; color: #94A3B8; margin-top: 2px;">
-        Click any chapter below to jump directly to that role interface in the recording.
+        Click any chapter below to jump directly to that role and feature walkthrough in the video.
       </p>
 
       <div class="chapters-grid">
         <div class="chapter-card" onclick="seekTo(0)">
-          <div class="chapter-time">0:00 - 0:26</div>
-          <div class="chapter-title">1. Login & Role Selection</div>
-          <div class="chapter-desc">Brand overview, inspection of all 4 demo role presets, and signing into Institution.</div>
+          <div class="chapter-time">0:00 - 0:12</div>
+          <div class="chapter-title">1. AEGIS Landing Hub</div>
+          <div class="chapter-desc">Modern government visual system, Ashoka Chakra watermark, and 10 standardized role cards.</div>
         </div>
 
-        <div class="chapter-card" onclick="seekTo(26)">
-          <div class="chapter-time">0:26 - 0:58</div>
-          <div class="chapter-title">2. Institution Portal (Submit & Fix)</div>
-          <div class="chapter-desc">Metric cards, 4-stage lifecycle tracker, plain-language deficiencies, and upload modal.</div>
+        <div class="chapter-card" onclick="seekTo(12)">
+          <div class="chapter-time">0:12 - 0:28</div>
+          <div class="chapter-title">2. Institution Portal</div>
+          <div class="chapter-desc">Compliance Health Ring (0-100 radial gauge), lease alert carousel, and document vault.</div>
         </div>
 
-        <div class="chapter-card" onclick="seekTo(58)">
-          <div class="chapter-time">0:58 - 1:30</div>
-          <div class="chapter-title">3. Scrutiny Officer (Review & Recommend)</div>
-          <div class="chapter-desc">Fast queue jump, split PDF preview, live source checks, AI tamper flags, and escalation.</div>
+        <div class="chapter-card" onclick="seekTo(28)">
+          <div class="chapter-time">0:28 - 0:42</div>
+          <div class="chapter-title">3. Simulated Clock Engine</div>
+          <div class="chapter-desc">Time machine pill (+7d fast-forward), reactive SLA triggers, and live notification drawer.</div>
         </div>
 
-        <div class="chapter-card" onclick="seekTo(90)">
-          <div class="chapter-time">1:30 - 2:02</div>
-          <div class="chapter-title">4. Senior Officer (Oversee & Decide)</div>
-          <div class="chapter-desc">Executive analytics, deficiency chart, pinned adjudication panel, and rule engine toggles.</div>
+        <div class="chapter-card" onclick="seekTo(42)">
+          <div class="chapter-time">0:42 - 0:54</div>
+          <div class="chapter-title">4. Scrutiny Officer</div>
+          <div class="chapter-desc">Split-pane queue with ageing heat-strips, statutory checklist matrix, and electronic case summary.</div>
         </div>
 
-        <div class="chapter-card" onclick="seekTo(122)">
-          <div class="chapter-time">2:02 - 2:36</div>
-          <div class="chapter-title">5. Auditor Portal (Observe & Report)</div>
-          <div class="chapter-desc">Strict read-only security tag, immutable audit ledger with SHA-256 hashes, and CSV export.</div>
+        <div class="chapter-card" onclick="seekTo(54)">
+          <div class="chapter-time">0:54 - 1:07</div>
+          <div class="chapter-title">5. Regional Officer</div>
+          <div class="chapter-desc">Interactive SVG India heat map, stage processing funnel, and officer workload swimlanes.</div>
         </div>
 
-        <div class="chapter-card" onclick="seekTo(156)">
-          <div class="chapter-time">2:36 - 2:44</div>
-          <div class="chapter-title">6. Wrap-up & Trust Architecture</div>
-          <div class="chapter-desc">SmartVerifyAI shield wrap-up showcasing transparent end-to-end regulatory trust.</div>
+        <div class="chapter-card" onclick="seekTo(67)">
+          <div class="chapter-time">1:07 - 1:20</div>
+          <div class="chapter-title">6. Bureau Officer</div>
+          <div class="chapter-desc">National Pulse dashboard, comparative regional analytics, and persistent live alerts rail.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(80)">
+          <div class="chapter-time">1:20 - 1:33</div>
+          <div class="chapter-title">7. EVC Coordinator</div>
+          <div class="chapter-desc">Statutory delay alert, conflict-of-interest expert guard, and inspection timeline (Gantt).</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(93)">
+          <div class="chapter-time">1:33 - 1:46</div>
+          <div class="chapter-title">8. Committee Member</div>
+          <div class="chapter-desc">Dossier reading layout, advisory recommendation editor, and time-bound undertakings conditions.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(106)">
+          <div class="chapter-time">1:46 - 1:58</div>
+          <div class="chapter-title">9. Compliance Officer</div>
+          <div class="chapter-desc">6-stage undertakings Kanban, concentric lease/NOC expiry radar, and evidence verification.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(118)">
+          <div class="chapter-time">1:58 - 2:12</div>
+          <div class="chapter-title">10. Senior Authority</div>
+          <div class="chapter-desc">Executive council briefing, decision shelf (human-only sovereign sign), and mandatory statutory reason clause.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(132)">
+          <div class="chapter-time">2:12 - 2:25</div>
+          <div class="chapter-title">11. System Administrator</div>
+          <div class="chapter-desc">Visual node graph workflow designer with animated trace, and SLA threshold tuning.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(145)">
+          <div class="chapter-time">2:25 - 2:44</div>
+          <div class="chapter-title">12. Statutory Auditor</div>
+          <div class="chapter-desc">Case reconstruction replay scrubber, SHA-256 hash chains, and immutable audit trail.</div>
+        </div>
+
+        <div class="chapter-card" onclick="seekTo(164)">
+          <div class="chapter-time">2:44 - 2:53</div>
+          <div class="chapter-title">13. Brand Outro & Safeguard</div>
+          <div class="chapter-desc">AICTE sovereign decision preservation safeguard and unified platform governance.</div>
         </div>
       </div>
     </div>
   </div>
 
+  <footer style="padding: 16px 28px; background: #0B1120; border-top: 1px solid #1E293B; text-align: center; font-size: 11px; color: #64748B;">
+    Automated alerts support, but do not replace, statutory scrutiny and decisions of the competent authority.
+  </footer>
+
   <script>
     function seekTo(seconds) {
-      const v = document.getElementById('demoVideo');
-      v.currentTime = seconds;
-      v.play();
+      const video = document.getElementById('demoVideo');
+      if (video) {
+        video.currentTime = seconds;
+        video.play();
+        window.scrollTo({ top: 80, behavior: 'smooth' });
+      }
     }
   </script>
 </body>
